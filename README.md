@@ -5,7 +5,7 @@ Example application for using the [BGE-M3](https://huggingface.co/BAAI/bge-m3) m
 As a example use case, all three volumes of the original book versions the _Lord of the Rings_ fantasy novel series are used as source documents for querying during the information retrieval.
 Afterwards, some book trivia questions about the _Lord of the Rings_ series are given to the generation model, which it has to answer using the extracted information.
 
-The RAG-Pipeline is constructed using the [LangChain](https://python.langchain.com/v0.2/docs/introduction/) framework, utilizing [FAISS](https://github.com/facebookresearch/faiss) to efficiently search a vector database of the BGE-embedded document chunks and a Hugging Face pipeline for the response generation.
+The RAG-Pipeline is constructed using the [LangChain](https://python.langchain.com/v0.2/docs/introduction/) framework, utilizing [FAISS](https://github.com/facebookresearch/faiss) to efficiently search a vector database of the BGE-embedded document chunks and a Hugging Face [pipeline](https://huggingface.co/docs/transformers/main_classes/pipelines) for the response generation.
 To be able to use the Gemma-2-Instruct-9B on a consumer GPU, it is loaded in 4-Bit-Mode using a [quantization](https://huggingface.co/docs/accelerate/usage_guides/quantization) approach.
 
 <br>
@@ -73,4 +73,4 @@ To be able to use the Gemma-2-Instruct-9B on a consumer GPU, it is loaded in 4-B
 
 ### Notes
 
-The files in this repository which contain text from the books are cut off after the first 50 rows.
+The files in this repository which contain text from the books are cut off after the first 50 lines.
